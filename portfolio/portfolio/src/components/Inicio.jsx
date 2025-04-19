@@ -1,16 +1,17 @@
 import {React, useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import { Skills } from './Skills';
-import  PersonCard  from './PersonCard';
+// import  PersonCard  from './PersonCard';
 import { Portafolio } from './Portafolio';
 import { ExperienciaProfesional } from './ExperienciaProfesional';
 import { FormContact } from './FormContact';
+import imgDefault from '../images/default-web.png';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 export const Inicio = () => {
   useEffect(()=>{
-    AOS.init({duration:800});
+    AOS.init({duration:1800});
   } , [])
   return (
     <div className='container'>
@@ -25,10 +26,11 @@ export const Inicio = () => {
               Para saber mas de mi experiencia como desarrollador <Link type='button' to="/" className='contact_me'>contactame !</Link>
             </div>
         </div>
-        <div className='person_card'>
-          <div className='container_person'>
+        <div className='person_card' >
+          {/* <div className='container_person hid'>
             <PersonCard/>
-          </div>
+          </div> */}
+          <img src={imgDefault} alt="" />
         </div>
       </div>
       <Portafolio />

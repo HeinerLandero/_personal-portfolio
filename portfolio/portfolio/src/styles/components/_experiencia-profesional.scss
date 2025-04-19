@@ -5,6 +5,32 @@
     background: var(--blue-glacial);
     margin-top: 60px;
     margin-bottom: 60px;
+    overflow: hidden;
+    position: relative;
+    &::after,&::before{
+        position: absolute;
+        content:"";
+        background-color: var(--blue-turk);
+        border-radius: 50%;
+        transition: all 500ms;
+        z-index: -1;
+        width: 2px;
+        height: 2px;
+    }
+    &::after{
+        top: -10%;
+        right: -10%;
+    }
+    &::before{
+        left: -17%;
+        bottom: 12%;
+    }
+    &:hover{
+        &::after, &::before{
+            width: 300px;
+            height: 300px;
+        }
+    }
     .intro_content{
         .experience_title{
             color: var(--blue-turk);

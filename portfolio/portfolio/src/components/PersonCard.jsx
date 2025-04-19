@@ -49,7 +49,7 @@ export default function PersonCard(){
           }}
         >
           <button
-            style={{ position: "absolute", right: 0, zIndex: 9999, background : 'transparent', border:'none', overflow:'visible' }}
+            style={{ position: "absolute", right: 0, zIndex: 9999, background : 'transparent', border:'none' }}
             onClick={() => setIsCardExpanded(!isCardExpanded)}
           >
             <figure >

@@ -6,7 +6,26 @@
     padding: 34px;
     border-radius: 50px;
     background: var(--blue-glacial);
-   
+    overflow: hidden;
+    position: relative;
+    &::after{
+        position: absolute;
+        content:"";
+        top: -10%;
+        right: -10%;
+        width: 2px;
+        height: 2px;
+        background-color: var(--blue-turk);
+        border-radius: 50%;
+        transition: all 500ms;
+        z-index: -1;
+    }
+    &:hover{
+        &::after{
+            width: 300px;
+            height: 300px;
+        }
+    }
 
     .title_porfolio {
         color: var(--blue-turk);
