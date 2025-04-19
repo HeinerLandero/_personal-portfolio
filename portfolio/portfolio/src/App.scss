@@ -1,0 +1,141 @@
+
+.header{
+  display: flex;
+  align-items: center;
+  justify-content:space-evenly;
+  height: 64px;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  backdrop-filter: blur(10px);
+  .logo_letter{
+    font-size: 3rem;
+    font-weight: 600;
+    color: var(--white);
+    .slash{
+      color: var(--blue-turk);
+    }
+  }
+  ul{
+    margin: 0;
+    .active{
+      color:var(--blue-turk);
+    }
+  }
+  .nav_item{
+    text-decoration: none;
+    color: var(--white);
+    font-size: 18px;
+    font-weight: lighter;
+    position: relative;
+    &:before{
+      position: absolute;
+      content: ' ';
+      border-bottom: 3px var(--blue-turk) solid;
+      width: 0;
+      bottom: 0;
+      opacity: 0;
+      transition: opacity 0.3s ease, width 0.5s ease;
+      transition-delay: 0.3s;
+      transform:rotate(5deg);
+
+    }
+    &:after{
+      position: absolute;
+      content: ' ';
+      border-bottom: 3px var(--blue-turk) solid;
+      width: 0;
+      top: 0;
+      right:0;
+      opacity: 0;
+      transition: opacity 0.3s ease, width 0.5s ease;
+      transition-delay: 0.3s;
+      transform:rotate(5deg);
+    }
+    &:hover{
+      color:var(--blue-turk) ;
+      transition: all 500ms;
+        &:before{
+          opacity: 1;
+          width: 100%;
+          transition-delay: 0.2s;
+          transform: translate(1 ,-100%);
+        }
+        &:after {
+          opacity: 1;
+          width: 100%;
+          transition-delay: 0.2s;
+          transform: translate(1 ,100%);
+        }
+    }
+  }
+  .logo-container{
+      width: 120px;
+      margin: 0;
+      .logo{
+      width: 100%;
+      }
+  }
+
+}
+li{
+  display: flex;
+  gap: 30px;
+}
+
+/*inicio*/
+.title_init{
+  font-size: 50px;
+  font-weight: 900;
+}
+/* container main*/
+.container_main{
+  max-width: 80%;
+  margin: 0 auto;
+}
+.title_cards{
+  color: var(--txt-color);
+}
+.contact_me:hover{
+  color: var(--blue-ice);
+  transition: all 500ms;
+}
+.content{
+  min-height: 400px;
+  display: flex;
+  justify-content: center;
+}
+
+/*Services*/
+.title_service{
+  color: var(--txt-color);
+}
+/*Curriculum*/
+.titles_experiences{
+  color: var(--txt-color);
+}
+
+.footer{
+  text-align: center;
+  border-top: 5px outset var(--degradient);
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background:var(--degradient-opacity);
+  font-size: 14px;
+  color: var(--white);
+  margin-top: 60px;
+}
+
+@keyframes background { 
+  0% {
+    background-position: 0% 50%;
+  }
+  
+  50% {
+    background-position: 100% 50%;
+  }
+  
+  100% {
+    background-position: 0% 50%;
+  }
+}
